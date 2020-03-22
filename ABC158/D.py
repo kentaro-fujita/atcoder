@@ -1,23 +1,36 @@
+# import sys
+# input = sys.stdin.readline
+
+from collections import deque
+
 def main():
     S = input()
     Q = int(input())
-    S_reverse = S[::-1]
 
-    for i in range(Q):
-        q = list(input().split(' '))
-        if len(q) > 1:
-            if q[1] == '1':
-                S = q[2] + S
-                S_reverse = S_reverse + q[2] 
-            elif q[1] == '2':
-                S = S + q[2]
-                S_reverse = q[2] + S_reverse
-        elif q[0] == '1':
-            temp = S_reverse
-            S_reverse = S
-            S = temp
+    t = deque(S)
+    reverse = False
+    for _ in range(Q):
+        query = input()
+        if query[0] == '1':
+            reverse = not reverse
+        elif query[0] == '2':
+            _, F, C = query.split()
+            if F == '1':
+                if reverse:
+                    t.append(C)
+                else:
+                    t.appendleft(C)
+            elif F == '2':
+                if reverse:
+                    t.appendleft(C)
+                else:
+                    t.append(C)
+    
+    result = ''.join(t)
+    if reverse:
+        result = result[::-1]
 
-    print(S)
+    print(result)
 
 if __name__ == '__main__':
     main()
