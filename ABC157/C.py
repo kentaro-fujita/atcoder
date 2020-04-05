@@ -1,35 +1,31 @@
 def main():
-    N, M = map(int, input().split(' '))
-    s = []
-    c = []
-    for i in range(M):
-        si, ci = map(int, input().split(' '))
-        s.append(si)
-        c.append(ci)
-    
-    ans = [0]*N
-    flag = False
-    for i in range(M):
-        if ans[s[i]-1] == 0:
-            ans[s[i]-1] = c[i]
-        elif ans[s[i]-1] == c[i]:
-            ans[s[i]-1] = c[i]
-        else:
-            flag = True
-    
-    if flag:
-        print("-1")
-    elif ans[0] == 0 and N != 1:
-        print("-1")
+    N, M = map(int, input().split())
+
+    t = [-1] * N
+    for _ in range(M):
+        s, c = map(int, input().split())
+        s -= 1
+        if t[s] != -1 and t[s] != c:
+            print(-1)
+            exit()
+        t[s] = c
+        
+    if N != 1:
+        if t[0] == 0:
+            print(-1)
+            exit()
+        
+        if t[0] == -1:
+            t[0] = 1
+
+        for i in range(1, N):
+            if t[i] == -1:
+                t[i] = 0
     else:
-        for i in range(N):
-            print(ans[i], end='')
-        print('')
+        if t[0] == -1:
+            t[0] = 0
+    
+    print(''.join(map(str,t)))
 
 if __name__ == '__main__':
     main()
-
-"""
-A, B = map(int, input().split(' '))
-N = list(map(int, input().split(' ')))
-"""
