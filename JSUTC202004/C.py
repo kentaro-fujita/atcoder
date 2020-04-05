@@ -10,7 +10,6 @@ def dfs(a: int, b: int, c: int) -> int:
     if c:
         result += dfs(a, b, c - 1)
 
-    print(result, a, b, c)
     return result
 
 def main():
