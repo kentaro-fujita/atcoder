@@ -11,6 +11,5 @@ for i in range(1, N+1):
             dp[i][j] = dp[i-1][j]
         else:
             dp[i][j] = dp[i-1][j] or dp[i-1][j-p[i-1]]
-        print(i,j,dp[i][j])
 
 print(sum(dp[N]))
