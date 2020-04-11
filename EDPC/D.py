@@ -1,8 +1,8 @@
 N, W = map(int, input().split())
-v = [0] * N
 w = [0] * N
+v = [0] * N
 for i in range(N):
-    v[i], w[i] = map(int, input().split())
+    w[i], v[i] = map(int, input().split())
 
 dp = [[0] * (W+1) for _ in range(N)]
 
