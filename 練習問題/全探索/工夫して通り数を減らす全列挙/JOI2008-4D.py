@@ -19,3 +19,4 @@ for i in range(n):
             pvec.add((qx - px, qy - py))
     if pvec >= tvec:
         print(px - bx, py - by)
+        exit()
