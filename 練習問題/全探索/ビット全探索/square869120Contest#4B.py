@@ -18,7 +18,7 @@ for i in range(1<<n):
     mx = a[0]
     for j in range(1, n):
         if use_idx[j]:
-            if a[j] < mx:
+            if a[j] <= mx:
                 sm += mx+1 - a[j]
                 mx += 1
         mx = max(mx, a[j])
