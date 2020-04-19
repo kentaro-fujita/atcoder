@@ -5,7 +5,6 @@ S = [0] * N
 for i in range(N):
     H[i], S[i] = map(int, input().split())
  
- 
 def ok(v):
     tmp = sorted([((v - H[i]) / S[i]) for i in range(N)])
  
