@@ -1,5 +1,5 @@
 # 頻出関数
-## 数学
+## 整数問題
 ### 約数
 ```
 def make_divisors(n):
@@ -13,8 +13,51 @@ def make_divisors(n):
     # divisors.sort()
     return divisors
 ```
+### 最大公約数
+```
+def gcd(x, y):
+    if y == 0:
+        return x
+    else:
+        return gcd(y, x % y)
+```
+### 最小公倍数
+```
+def lcm(x, y):
+    d = gcd(x, y)
+    return a // x * y
+```
+### 素因数分解
+```
+def prime_factorize(n):
+    res = []
+    for i in range(2, int(n**(1/2))+1):
+        if n % i != 0: continue
+        num = 0
+        while n % i == 0:
+            num += 1
+            n /= i
+        res.append((i, num))
+    if n != 1:
+        res.append((n, 1))
+    
+    return res
+```
+### べき乗 (10**9+7で割った余り)
+```
+mod = 10**9 + 7
 
-### 組み合わせ (10**9+7で割った余り)
+def pow(x, y):
+    ret = 1
+    while y:
+        if y & 1:
+            ret = ret * x % mod
+        x = x * x % mod
+        n >>= 1
+    
+    return ret
+```
+### 二項係数 (10**9+7で割った余り)
 ```
 def cmb(n, r, mod):
     if ( r<0 or r>n ):
