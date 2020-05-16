@@ -1,23 +1,22 @@
-def dfs(a: int, b: int, c: int) -> int:
-    if a == b == c == 0:
-        return 1
+from itertools import permutations
 
-    result = 0
-    if a > b:
-        result += dfs(a - 1, b, c)
-    if b > c:
-        result += dfs(a, b - 1, c)
-    if c:
-        result += dfs(a, b, c - 1)
+a1, a2, a3 = map(int, input().split())
+a = [a1, a2, a3]
+N = a1 + a2 + a3
 
-    return result
+res = 0
+for p in permutations(range(1,N+1)):
+    X = [p[:a1], p[a1:a1+a2], p[a1+a2:]]
+    flag = True
+    for i in range(3):
+        for j in range(1, a[i]):
+            if X[i][j] <= X[i][j - 1]:
+                flag = False
+    for i in range(1, 3):
+        for j in range(a[i]):
+            if X[i][j] <= X[i - 1][j]:
+                flag = False
+    if flag:
+        res += 1
 
-def main():
-    a1, a2, a3 = list(map(int, input().split()))
-
-    ans = dfs(a1, a2, a3)
-
-    print(ans)
-
-if __name__ == '__main__':
-    main()
+print(res)
