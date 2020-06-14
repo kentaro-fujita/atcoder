@@ -1,4 +1,5 @@
 n = int(input())
+
 lb, ub = 0, n
 print(lb, flush=True)
 s = str(input())
