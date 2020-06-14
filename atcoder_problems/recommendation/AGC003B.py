@@ -1,8 +1,14 @@
 n = int(input())
 a = [int(input()) for _ in range(n)]
 
-dp = [0] * n
-for i in range(1, n):
-    dp[i] = max(a[i-1]//2, min(a[i-1], a[i]))
+ans = 0
+i = 0
+while i < n:
+    res = 0
+    for j in range(i, n):
+        if a[j] == 0: break
+        res += a[j]
+    ans += res // 2
+    i = j + 1
 
-print(dp)
+print(ans)
