@@ -103,40 +103,54 @@ def primes(n):
     return [i for i in range(n + 1) if is_prime[i]]
 ```
 ## 木
+### UnionFind木
 ```
-class UnionFind:
+class UnionFind():
     def __init__(self, n):
-        self.par = [i for i in range(n)]
-        self.rank = [0] * n
-        self.size = [1] * n
+        self.n = n
+        self.parents = [-1] * n
 
     def find(self, x):
-        if self.par[x] == x:
+        if self.parents[x] < 0:
             return x
         else:
-            self.par[x] = self.find(self.par[x])
-            return self.par[x]
+            self.parents[x] = self.find(self.parents[x])
+            return self.parents[x]
 
-    def unite(self, x, y):
+    def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
+
         if x == y:
             return
-        
-        if self.rank[x] < self.rank[y]:
-            self.par[x] = y
-            self.size[y] += self.size[x]
-        else:
-            self.par[y] = x
-            self.size[x] += self.size[y]
-            if self.rank[x] == self.rank[y]:
-                self.rank[x] += 1
-    
+
+        if self.parents[x] > self.parents[y]:
+            x, y = y, x
+
+        self.parents[x] += self.parents[y]
+        self.parents[y] = x
+
+    def size(self, x):
+        return -self.parents[self.find(x)]
+
     def same(self, x, y):
-        if self.find(x) == self.find(y):
-            return True
-        else:
-            return False
+        return self.find(x) == self.find(y)
+
+    def members(self, x):
+        root = self.find(x)
+        return [i for i in range(self.n) if self.find(i) == root]
+
+    def roots(self):
+        return [i for i, x in enumerate(self.parents) if x < 0]
+
+    def group_count(self):
+        return len(self.roots())
+
+    def all_group_members(self):
+        return {r: self.members(r) for r in self.roots()}
+
+    def __str__(self):
+        return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
 uf = UnionFind(n) # n: 頂点数
 ```
