@@ -1,6 +1,6 @@
 N = int(input())
 
-num =[[0] * 10 for _ in range(10)]
+num = [[0] * 10 for _ in range(10)]
 
 for n in range(1, N+1):
     s = str(n)

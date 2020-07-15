@@ -7,11 +7,11 @@ for i in range(m):
 
 c = []
 for x, p in enumerate(pre):
-    p.sort(key = lambda x : x[1])
+    p.sort(key=lambda x: x[1])
 
     for j, (i, y) in enumerate(p):
         c.append((i, x+1, j+1))
 
-c.sort(key = lambda x :x[0])
+c.sort(key=lambda x: x[0])
 for _, x, y in c:
     print(str(x).zfill(6)+str(y).zfill(6))

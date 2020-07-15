@@ -4,7 +4,8 @@ k = int(input())
 
 for i in range(n):
     x = ord(s[i]) - ord('a')
-    if x == 0 or 26 - x > k: continue
+    if x == 0 or 26 - x > k:
+        continue
     k -= 26 - x
     s[i] = 'a'
 

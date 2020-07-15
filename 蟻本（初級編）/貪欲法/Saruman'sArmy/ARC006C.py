@@ -9,7 +9,7 @@ for w in W:
             flag = True
             L[i].append(w)
             break
-        
+
     if not flag:
         L.append([w])
 

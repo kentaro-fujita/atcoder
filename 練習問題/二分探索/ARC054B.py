@@ -1,7 +1,9 @@
 p = float(input())
 
+
 def f(x):
     return x+p/2**(x/1.5)
+
 
 high = 100
 low = 0

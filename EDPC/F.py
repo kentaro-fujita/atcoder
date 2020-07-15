@@ -14,7 +14,7 @@ for i in range(1, n+1):
             dp[i][j] = max(dp[i-1][j], dp[i][j-1])
 
 res = ''
-while n != 0 and m!= 0:
+while n != 0 and m != 0:
     if dp[n][m] == dp[n-1][m]:
         n -= 1
     elif dp[n][m] == dp[n][m-1]:

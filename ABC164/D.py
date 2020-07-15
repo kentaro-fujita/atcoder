@@ -3,7 +3,7 @@ N = len(S)
 P = 2019
 
 mod = 0
-count = [0]* P
+count = [0] * P
 ten = 1
 count[mod] += 1
 for i in range(N):

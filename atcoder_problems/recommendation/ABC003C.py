@@ -3,9 +3,9 @@ r = list(map(int, input().split()))
 r.sort()
 
 ans = 0
-l = r[-k:]
-m = len(l)
+ll = r[-k:]
+m = len(ll)
 for i in range(m):
-    ans = (ans + l[i]) / 2
+    ans = (ans + ll[i]) / 2
 
 print(ans)

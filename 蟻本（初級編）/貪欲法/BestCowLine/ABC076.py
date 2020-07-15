@@ -4,7 +4,7 @@ t = input()
 result = []
 for i in range(len(s)-len(t)+1):
     temp = '?'*i + t + '?'*(len(s)-len(t)-i)
-    
+
     ans = ''
     flag = True
     for j in range(len(s)):

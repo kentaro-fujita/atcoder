@@ -7,15 +7,15 @@ for i in range(N):
     xy[i] = [list(map(int, input().split())) for _ in range(A[i])]
 
 ans = 0
-for i in range(1<<N):
+for i in range(1 << N):
     honest = []
     unkind = []
     for j in range(N):
-        if i & (1<<j):
+        if i & (1 << j):
             honest.append(j)
         else:
             unkind.append(j)
-    
+
     flag = True
     for h in honest:
         for x, y in xy[h]:
@@ -25,7 +25,7 @@ for i in range(1<<N):
                 continue
 
             flag = False
-    
+
     if flag:
         ans = max(ans, len(honest))
 

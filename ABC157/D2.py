@@ -31,7 +31,7 @@ for root in range(N):
                 continue
             D[root].add(to)
             stack.append(to)
-    
+
 ans = [0] * N
 for iam in range(N):
     group = D[parent[iam]]

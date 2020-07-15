@@ -7,10 +7,10 @@ L.sort()
 ans = 0
 for i in range(N):
     a = L[i]
-    for j in range(i+1, N):
+    for j in range(i + 1, N):
         b = L[j]
 
-        k = bisect_left(L, a+b)
-        ans += max(k - (j+1), 0)
+        k = bisect_left(L, a + b)
+        ans += max(k - (j + 1), 0)
 
 print(ans)

@@ -2,9 +2,9 @@ from itertools import product
 
 n = int(input())
 
-L=[]
-for i in range(3,10):
-    L+=list(product("753",repeat=i))
+L = []
+for i in range(3, 10):
+    L += list(product("753", repeat=i))
 
 ans = 0
 for l in L:

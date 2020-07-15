@@ -14,6 +14,6 @@ for s, t in st:
         else:
             if l <= s <= r:
                 s = l
-                if  l <= t:
+                if l <= t:
                     print(i+1)
                     break

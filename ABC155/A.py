@@ -12,11 +12,6 @@ def main():
     else:
         print('No')
 
+
 if __name__ == '__main__':
     main()
-
-"""
-A, B = input().split(' ')
-A, B = map(int, input().split(' '))
-N = list(map(int, input().split(' ')))
-"""

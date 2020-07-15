@@ -1,5 +1,5 @@
 def main():
-    N = int(input())
+    _ = int(input())
     A = list(map(int, input().split(' ')))
 
     is_break = False
@@ -10,7 +10,7 @@ def main():
         else:
             is_break = True
             break
-    
+
     if is_break:
         print("NO")
     else:

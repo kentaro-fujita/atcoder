@@ -1,7 +1,8 @@
 from collections import Counter
 
+
 def main():
-    N = int(input())
+    _ = int(input())
     A = list(map(int, input().split()))
     count = Counter(A)
     sum_ = sum([v*(v-1)/2 for v in count.values()])
@@ -10,6 +11,7 @@ def main():
         took_count = count[A[i]]
         sub = took_count - 1
         print(int(sum_ - sub))
+
 
 if __name__ == '__main__':
     main()

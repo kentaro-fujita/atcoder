@@ -20,5 +20,5 @@ else:
         ans = n - c_a[0][1] - c_b[0][1]
     else:
         ans = min(n - c_a[0][1] - c_b[1][1], n - c_a[1][1] - c_b[0][1])
-    
+
     print(ans)

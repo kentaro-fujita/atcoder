@@ -9,6 +9,7 @@ def primes(n):
             is_prime[j] = False
     return is_prime
 
+
 is_prime = primes(10**5)
 like = [0] * 10**5
 for i in range(3, 10**5, 2):

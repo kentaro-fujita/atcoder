@@ -14,6 +14,7 @@ def f(n, x):
     else:
         return num * 2 + 1
 
+
 n, x = map(int, input().split())
 
-print(f(n,x))
+print(f(n, x))

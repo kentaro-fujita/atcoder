@@ -1,6 +1,6 @@
 import heapq
 
-n , k = map(int, input().split())
+n, k = map(int, input().split())
 
 ans = []
 g = [[] for _ in range(n)]
@@ -14,13 +14,14 @@ for i in range(k):
         pq = [(0, a-1)]
         while pq:
             d, node = heapq.heappop(pq)
-            if d > dis[node]: continue
+            if d > dis[node]:
+                continue
 
             for nxt, cost in g[node]:
                 if d + cost < dis[nxt]:
                     dis[nxt] = d + cost
                     heapq.heappush(pq, (dis[nxt], nxt))
-        
+
         res = dis[b-1]
         if res == float("inf"):
             ans.append(-1)

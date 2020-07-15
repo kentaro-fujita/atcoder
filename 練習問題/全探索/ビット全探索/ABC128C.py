@@ -6,10 +6,10 @@ for i in range(m):
 p = list(map(int, input().split()))
 
 ans = 0
-for i in range(1<<n):
+for i in range(1 << n):
     isOn = []
     for j in range(n):
-        if i & (1<<j):
+        if i & (1 << j):
             isOn.append(j+1)
 
     flag = True

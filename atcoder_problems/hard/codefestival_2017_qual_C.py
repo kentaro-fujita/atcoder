@@ -1,17 +1,17 @@
 s = input()
 
 ans = 0
-l = 0
-r = len(s) - 1
-while l < r:
-    if s[l] == s[r]:
-        l += 1
-        r -= 1
-    elif s[l] == 'x':
-        l += 1
+left = 0
+right = len(s) - 1
+while left < right:
+    if s[left] == s[right]:
+        left += 1
+        right -= 1
+    elif s[left] == 'x':
+        left += 1
         ans += 1
-    elif s[r] == 'x':
-        r -= 1
+    elif s[right] == 'x':
+        right -= 1
         ans += 1
     else:
         ans = -1

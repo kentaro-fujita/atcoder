@@ -1,7 +1,9 @@
 import math
 
+
 def comb(n, r):
     return math.factorial(n) // (math.factorial(n-r) * math.factorial(r))
+
 
 n, p = map(int, input().split())
 a = list(map(int, input().split()))

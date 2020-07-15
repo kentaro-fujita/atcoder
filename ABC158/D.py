@@ -3,6 +3,7 @@
 
 from collections import deque
 
+
 def main():
     S = input()
     Q = int(input())
@@ -25,17 +26,13 @@ def main():
                     t.appendleft(C)
                 else:
                     t.append(C)
-    
+
     result = ''.join(t)
     if reverse:
         result = result[::-1]
 
     print(result)
 
+
 if __name__ == '__main__':
     main()
-
-"""
-A,B = map(int, input().split(' '))
-N = list(map(int, inputs().split(' ')))
-"""

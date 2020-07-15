@@ -18,7 +18,8 @@ for i in range(n):
     while que:
         t = que.popleft()
         for e in g[t]:
-            if d[e] != -1: continue
+            if d[e] != -1:
+                continue
             d[e] = d[t] + 1
             que.append(e)
 

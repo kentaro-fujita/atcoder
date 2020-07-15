@@ -20,7 +20,8 @@ for v in c:
 while que:
     t = que.popleft()
     for e in g[t]:
-        if d[e] != float("inf"): continue
+        if d[e] != float("inf"):
+            continue
         d[e] = d[t] + 1
         que.append(e)
 
@@ -39,7 +40,8 @@ dis[0] = 0
 pq = [(0, 0)]
 while pq:
     d, node = heapq.heappop(pq)
-    if d > dis[node]: continue
+    if d > dis[node]:
+        continue
 
     for nxt in g[node]:
         if d + cost[nxt] < dis[nxt]:

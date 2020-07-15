@@ -7,7 +7,7 @@ ans = -float("inf")
 for i in range(1, 2**10):
     isOpen = []
     for j in range(10):
-        if i & (1<<j):
+        if i & (1 << j):
             isOpen.append(1)
         else:
             isOpen.append(0)
@@ -20,4 +20,4 @@ for i in range(1, 2**10):
         res += p[j][cnt]
     ans = max(ans, res)
 
-print(ans) 
+print(ans)

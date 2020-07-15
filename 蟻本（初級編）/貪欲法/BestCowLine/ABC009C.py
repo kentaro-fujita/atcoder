@@ -2,6 +2,7 @@ n, k = map(int, input().split())
 s = input()
 s_sorted = sorted(s)
 
+ans = 0
 count = 0
 for i in range(n):
     for c in s_sorted():
@@ -10,7 +11,7 @@ for i in range(n):
             tmp = 1
         else:
             tmp = 0
-        
+
         t = s_sorted[:]
         t.remove(c)
         for j in range(i+1, n):

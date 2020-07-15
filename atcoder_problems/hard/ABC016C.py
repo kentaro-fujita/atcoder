@@ -12,5 +12,5 @@ for i in range(n):
         for y in g[x]:
             if y != i and y not in g[i]:
                 ans.append(y)
-    
+
     print(len(set(ans)))

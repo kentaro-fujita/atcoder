@@ -1,5 +1,5 @@
 def main():
-    N = int(input())
+    _ = int(input())
     X = list(map(int, input().split(' ')))
 
     ans = []
@@ -11,11 +11,6 @@ def main():
 
     print(min(ans))
 
+
 if __name__ == '__main__':
     main()
-
-
-"""
-A, B = map(int, input().split(' '))
-N = list(map(int, input().split(' ')))
-"""

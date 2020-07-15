@@ -4,8 +4,8 @@ P = list(map(int, input().split()))
 s = [0] * (N+2)
 for i in range(M-1):
     d, t = P[i], P[i+1]
-    s[min(d,t)] += 1
-    s[max(d,t)] -= 1
+    s[min(d, t)] += 1
+    s[max(d, t)] -= 1
 
 for i in range(N):
     s[i+1] += s[i]

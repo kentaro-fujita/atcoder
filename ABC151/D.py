@@ -6,6 +6,7 @@ c = [list(input()) for _ in range(H)]
 dx = [1, 0, -1, 0]
 dy = [0, 1, 0, -1]
 
+
 def bfs(sx, sy):
     d = [[-1] * W for _ in range(H)]
 
@@ -28,6 +29,7 @@ def bfs(sx, sy):
                 res = max(res, tmp)
 
     return res
+
 
 ans = 0
 for i in range(H):

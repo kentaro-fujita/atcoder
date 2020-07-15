@@ -7,11 +7,6 @@ def main():
     else:
         print(R)
 
+
 if __name__ == '__main__':
     main()
-
-
-"""
-A, B = map(int, input().split(' '))
-N = list(map(int, input().split(' ')))
-"""

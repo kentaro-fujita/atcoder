@@ -5,9 +5,10 @@ def make_divisors(n):
             divisors.append(i)
             if i != n // i:
                 divisors.append(n//i)
-    
+
     divisors.sort()
     return divisors
+
 
 n = int(input())
 

@@ -1,18 +1,19 @@
 import math
 
+
 def main():
     D, G = map(int, input().split())
 
     pc = [list(map(int, input().split())) for _ in range(D)]
 
     ans = 100**10
-    for i in range(1<<D):
+    for i in range(1 << D):
         score = 0
         prob = 0
         last = -1
         for j in range(D):
             p, c = pc[j]
-            if i & (1<<j):
+            if i & (1 << j):
                 score += (j+1)*100*p + c
                 prob += p
             else:

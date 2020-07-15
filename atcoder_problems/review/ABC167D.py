@@ -14,6 +14,6 @@ while not seen[nxt] and cnt != k:
 if cnt == k:
     print(nxt)
     exit()
-    
+
 idx = visited.index(nxt)
-print(visited[idx:][(k-idx)%(len(visited)-idx)])
+print(visited[idx:][(k-idx) % (len(visited)-idx)])

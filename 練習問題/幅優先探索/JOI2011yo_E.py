@@ -12,10 +12,11 @@ c.append("X" * (W+2))
 
 seen = [[-1] * (W+2) for _ in range(H+2)]
 
+
 def bfs(sx, sy, goal):
     queue = deque([(sx, sy)])
     seen[sx][sy] = 0
-    
+
     while queue:
         x, y = queue.popleft()
         if c[x][y] == str(goal):
@@ -24,13 +25,14 @@ def bfs(sx, sy, goal):
         for dx, dy in [(-1, 0), (0, 1), (1, 0), (0, -1)]:
             nx = x + dx
             ny = y + dy
-                
+
             if seen[nx][ny] == -1 and c[nx][ny] != "X":
                 seen[nx][ny] = seen[x][y] + 1
                 queue.append((nx, ny))
 
+
 ans = 0
-for i in range(1,N+1):
+for i in range(1, N+1):
     sx, sy, time = bfs(sx, sy, i)
     seen = [[-1] * (W+2) for _ in range(H+2)]
     ans += time

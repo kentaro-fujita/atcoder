@@ -1,3 +1,6 @@
+import heapq
+
+
 class UnionFind:
     def __init__(self, n):
         self.par = [i for i in range(n)]
@@ -16,7 +19,7 @@ class UnionFind:
         y = self.find(y)
         if x == y:
             return
-        
+
         if self.rank[x] < self.rank[y]:
             self.par[x] = y
             self.size[y] += self.size[x]
@@ -25,7 +28,7 @@ class UnionFind:
             self.size[x] += self.size[y]
             if self.rank[x] == self.rank[y]:
                 self.rank[x] += 1
-    
+
     def same(self, x, y):
         if self.find(x) == self.find(y):
             return True
@@ -41,6 +44,8 @@ for i in range(E):
 edges.sort()
 
 # クラスカル法
+
+
 def kruskal(n, edges):
     U = UnionFind(n)
     res = 0
@@ -51,10 +56,10 @@ def kruskal(n, edges):
             U.unite(s, t)
     return res
 
+
 print(kruskal(V, edges))
 
 ##################################
-import heapq
 
 V, E = map(int, input().split())
 
@@ -66,11 +71,13 @@ for _ in range(E):
     edges[t-1].append([w, s-1])
 
 # プリム法
+
+
 def prim(n, w, edges):
-    used = [True] * n #True:不使用
+    used = [True] * n  # True:不使用
     edgelist = []
     for e in edges[0]:
-        heapq.heappush(edgelist,e)
+        heapq.heappush(edgelist, e)
     used[0] = False
     res = 0
     while len(edgelist) != 0:
@@ -81,8 +88,9 @@ def prim(n, w, edges):
         used[v] = False
         for e in edges[v]:
             if used[e[1]]:
-                heapq.heappush(edgelist,e)
+                heapq.heappush(edgelist, e)
         res += minedge[0]
     return res
+
 
 print(prim(V, E, edges))

@@ -18,7 +18,7 @@ while que:
 
     if (x, y) == (gx-1, gy-1):
         break
-    
+
     for i in range(4):
         nx = x + dx[i]
         ny = y + dy[i]

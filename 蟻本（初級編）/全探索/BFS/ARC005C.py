@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def dfs():
     d = [[[False] * 3 for j in range(w)] for i in range(h)]
 
@@ -44,6 +45,7 @@ def dfs():
     for i in range(3):
         if d[gx][gy][i]:
             return True
+
 
 h, w = map(int, input().split())
 maze = [list(input()) for _ in range(h)]

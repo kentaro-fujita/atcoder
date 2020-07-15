@@ -10,11 +10,11 @@ for i in range(n):
     for j in range(13):
         if s[i] == '?':
             for k in range(10):
-                dp[i+1][(j*10+k)%13] += dp[i][j] 
-                dp[i+1][(j*10+k)%13] %= mod
+                dp[i+1][(j*10+k) % 13] += dp[i][j]
+                dp[i+1][(j*10+k) % 13] %= mod
         else:
             k = int(s[i])
-            dp[i+1][(j*10+k)%13] += dp[i][j]
-            dp[i+1][(j*10+k)%13] %= mod
+            dp[i+1][(j*10+k) % 13] += dp[i][j]
+            dp[i+1][(j*10+k) % 13] %= mod
 
 print(dp[n][5])

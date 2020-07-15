@@ -45,9 +45,10 @@ class UnionFind():
     def __str__(self):
         return '\n'.join('{}: {}'.format(r, self.members(r)) for r in self.roots())
 
+
 n, m = map(int, input().split())
 
-uf = UnionFind(n) # n: 頂点数
+uf = UnionFind(n)  # n: 頂点数
 
 for i in range(m):
     x, y, z = map(int, input().split())

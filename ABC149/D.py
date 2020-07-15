@@ -1,7 +1,7 @@
 N, K = map(int, input().split())
 R, S, P = map(int, input().split())
 T = list(input())
-hands = {'r': 'p', 'p':'s', 's': 'r'}
+hands = {'r': 'p', 'p': 's', 's': 'r'}
 
 ans = 0
 h = []

@@ -1,6 +1,6 @@
 N, K = map(int, input().split())
 A = [0] + list(map(int, input().split()))
- 
+
 s = [0] * (N+1)
 p = 1
 h = []
@@ -15,7 +15,7 @@ for i in range(K):
 if i == K-1:
     print(p)
     exit()
-else: 
+else:
     period = len(h) - h.index(p)
     rem = (K - h.index(p)) % period
     print(h[h.index(p):][rem])

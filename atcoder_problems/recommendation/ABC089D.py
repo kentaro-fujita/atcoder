@@ -20,4 +20,4 @@ for i in range(q):
 
     res.append(dis[r]-dis[l])
 
-print("\n".join(map(str,res)))
+print("\n".join(map(str, res)))

@@ -18,7 +18,7 @@ else:
     res1 += a[n//2-1] + a[n//2]
     for i in range(n//2+1, n):
         res1 -= a[i] * 2
-    
+
     res2 = 0
     for i in range(n//2):
         res2 += a[i] * 2

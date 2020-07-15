@@ -9,6 +9,8 @@ seen = [[0] * w for _ in range(h)]
 dxdy = [(-1, 0), (1, 0), (0, -1), (0, 1)]
 
 global ans
+
+
 def dfs(x, y):
     seen[y][x] = 1
     a, b = 1, 0
@@ -19,8 +21,9 @@ def dfs(x, y):
             p = dfs(nx, ny)
             a += p[1]
             b += p[0]
-    
+
     return (a, b)
+
 
 ans = 0
 for i in range(h):

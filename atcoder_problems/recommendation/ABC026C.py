@@ -9,6 +9,8 @@ for i in range(n-1):
     g[b-1].append(i+1)
 
 s = [0] * n
+
+
 def dfs(g, v):
     s[v] = 1
     if not g[v]:
@@ -18,5 +20,6 @@ def dfs(g, v):
         if s[e] == 0:
             res.append(dfs(g, e))
     return max(res) + min(res) + 1
+
 
 print(dfs(g, 0))

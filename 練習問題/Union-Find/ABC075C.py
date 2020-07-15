@@ -16,7 +16,7 @@ class UnionFind:
         y = self.find(y)
         if x == y:
             return
-        
+
         if self.rank[x] < self.rank[y]:
             self.par[x] = y
             self.size[y] += self.size[x]
@@ -25,7 +25,7 @@ class UnionFind:
             self.size[x] += self.size[y]
             if self.rank[x] == self.rank[y]:
                 self.rank[x] += 1
-    
+
     def same(self, x, y):
         if self.find(x) == self.find(y):
             return True
@@ -48,7 +48,7 @@ for i in range(M):
     s = set()
     for j in range(N):
         s.add(UF.find(j))
- 
+
     if len(s) > 1:
         ans += 1
 

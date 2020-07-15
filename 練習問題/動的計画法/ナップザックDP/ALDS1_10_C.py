@@ -16,7 +16,7 @@ for _ in range(q):
                 dp[i][j] = dp[i-1][j-1] + 1
             else:
                 dp[i][j] = max(dp[i-1][j], dp[i][j-1])
-    
+
     ans.append(dp[n][m])
 
 for a in ans:

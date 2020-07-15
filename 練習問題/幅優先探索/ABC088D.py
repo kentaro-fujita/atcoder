@@ -18,7 +18,7 @@ que.append((0, 0))
 d[0][0] = 1
 while que:
     x, y = que.popleft()
-    
+
     for dx, dy in dxdy:
         nx = x + dx
         ny = y + dy

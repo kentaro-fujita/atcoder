@@ -2,7 +2,7 @@ n = int(input())
 xyh = [list(map(int, input().split())) for _ in range(n)]
 
 for x, y, h in xyh:
-    if h!= 0:
+    if h != 0:
         x0, y0, h0 = (x, y, h)
         break
 

@@ -13,7 +13,7 @@ for i in range(h-1):
     if a[i][w-1] % 2 == 1:
         a[i][w-1] -= 1
         a[i+1][w-1] += 1
-        ans.append((i+1,w,i+2,w))
+        ans.append((i+1, w, i+2, w))
 
 print(len(ans))
 for a in ans:

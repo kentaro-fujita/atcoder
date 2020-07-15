@@ -22,7 +22,7 @@ else:
             print(-1)
             exit()
     tail = reversed(ans)
- 
+
     if n % 2 == 1:
         print(''.join(map(str, ans))+a[n//2][0]+''.join(map(str, tail)))
     else:

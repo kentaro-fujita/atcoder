@@ -6,7 +6,7 @@ cnt = 0
 for i in range(h):
     for j in range(w):
         if s[i][j] == '#':
-            cnt += 1 
+            cnt += 1
             a[i][j] = cnt
         elif j >= 1 and a[i][j-1] > 0:
             a[i][j] = a[i][j-1]

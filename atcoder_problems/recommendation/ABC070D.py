@@ -16,7 +16,8 @@ dis[k-1] = 0
 pq = [(0, k-1)]
 while pq:
     d, node = heapq.heappop(pq)
-    if d > dis[node]: continue
+    if d > dis[node]:
+        continue
 
     for nxt, cost in g[node]:
         if d + cost < dis[nxt]:

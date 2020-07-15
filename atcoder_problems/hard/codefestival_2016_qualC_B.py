@@ -10,7 +10,7 @@ for i in range(k):
         if a[j] > max_value:
             max_value = a[j]
             max_index = j
-    
+
     if pre_index != max_index:
         a[max_index] -= 1
         pre_index = max_index

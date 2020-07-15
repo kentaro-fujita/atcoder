@@ -6,7 +6,7 @@ BC = [list(map(int, input().split())) for _ in range(M)]
 
 heapq.heapify(A)
 
-BC = sorted(BC, key = lambda x : x[1], reverse=True)
+BC = sorted(BC, key=lambda x: x[1], reverse=True)
 for b, c in BC:
     for i in range(b):
         a = heapq.heappop(A)

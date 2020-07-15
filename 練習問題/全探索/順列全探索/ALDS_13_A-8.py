@@ -36,11 +36,13 @@ def search_blank_in_row(y):
 
 
 def put_queen_in_row(y):
-    #print("put_queen_row",y, queens)
+    # print("put_queen_row",y, queens)
     if y == 8:
-        return True     # 8 Queens have already been existed; reached the solution.
+        # 8 Queens have already been existed; reached the solution.
+        return True
     if y in skip_row:
-        return put_queen_in_row(y + 1)   # skip rows where a queen already exists as the precondition
+        # skip rows where a queen already exists as the precondition
+        return put_queen_in_row(y + 1)
 
     for x in search_blank_in_row(y):
         put_queen(x, y)

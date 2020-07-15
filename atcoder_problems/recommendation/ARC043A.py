@@ -9,6 +9,6 @@ if nb == 0 and b != 0:
     exit()
 
 p = nb / b
-q = a - na / p 
+q = a - na / p
 
 print(1/p, q)

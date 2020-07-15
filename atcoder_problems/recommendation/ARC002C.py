@@ -1,9 +1,9 @@
 n = int(input())
 cmd = input()
- 
+
 bs = ['X', 'Y', 'A', 'B']
 scs = [x+y for x in bs for y in bs]
- 
+
 ans = float('inf')
 for l in scs:
     for r in scs:

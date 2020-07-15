@@ -1,6 +1,6 @@
 from decimal import Decimal
 
-a, b  = map(float, input().split())
+a, b = map(float, input().split())
 a = Decimal(str(a))
 b = Decimal(str(b))
 

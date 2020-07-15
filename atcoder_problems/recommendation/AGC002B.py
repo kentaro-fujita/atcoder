@@ -10,7 +10,7 @@ for i in range(m):
         s[y-1] = 1
     if b[x-1] == 1:
         s[x-1] = 0
-    
+
     b[x-1] -= 1
     b[y-1] += 1
 

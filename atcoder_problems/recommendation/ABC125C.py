@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+
 def make_divisors(n):
     divisors = []
     for i in range(1, int(n**0.5)+1):
@@ -7,9 +8,10 @@ def make_divisors(n):
             divisors.append(i)
             if i != n // i:
                 divisors.append(n//i)
-    
+
     divisors.sort()
     return divisors
+
 
 n = int(input())
 a = list(map(int, input().split()))

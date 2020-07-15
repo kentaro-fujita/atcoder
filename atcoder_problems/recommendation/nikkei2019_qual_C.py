@@ -5,7 +5,7 @@ for i in range(n):
     a, b = map(int, input().split())
     ab.append((a+b, a, b))
 
-ab.sort(key= lambda x:x[0])
+ab.sort(key=lambda x: x[0])
 
 ans = 0
 for i in range(n):

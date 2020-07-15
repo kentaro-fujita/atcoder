@@ -8,6 +8,7 @@ s = [list(map(int, input().split())) for _ in range(n)]
 dx = [-1, 0, 1, 0]
 dy = [0, -1, 0, 1]
 
+
 def dfs(i, j, count):
     s[j][i] = 0
     count += 1
@@ -18,6 +19,7 @@ def dfs(i, j, count):
                 ans = max(ans, dfs(i+x, j+y, count))
     s[j][i] = 1
     return ans
+
 
 ans = 0
 for j in range(n):

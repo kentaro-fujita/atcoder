@@ -1,5 +1,6 @@
 from collections import deque
 
+
 def bfs():
     d = [[float("inf")] * w for i in range(h)]
 
@@ -22,8 +23,9 @@ def bfs():
             if 0 <= nx < h and 0 <= ny < w and maze[nx][ny] != "#" and d[nx][ny] == float("inf"):
                 que.append((nx, ny))
                 d[nx][ny] = d[p[0]][p[1]] + 1
-    
+
     return d[gx][gy]
+
 
 h, w = map(int, input().split())
 maze = [list(input()) for _ in range(h)]

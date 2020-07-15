@@ -7,8 +7,8 @@ def main():
         A -= 1
     if U == T:
         B -= 1
-    
-    print('{} {}'.format(A,B))
+
+    print('{} {}'.format(A, B))
 
 
 if __name__ == '__main__':

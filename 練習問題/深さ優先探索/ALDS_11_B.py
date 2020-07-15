@@ -2,7 +2,7 @@ from collections import deque
 
 n = int(input())
 
-g = [deque([]) *n for _ in range(n)]
+g = [deque([]) * n for _ in range(n)]
 
 for i in range(n):
     u, k, *V = list(map(int, input().split()))
@@ -14,6 +14,8 @@ for i in range(n):
 time = 0
 arrive_time = [-1] * n
 finish_time = [-1] * n
+
+
 def dfs(v):
     global time
     time += 1
@@ -33,6 +35,7 @@ def dfs(v):
             stack.pop()
 
     return [arrive_time, finish_time]
+
 
 for i in range(n):
     if arrive_time[i] < 0:

@@ -14,7 +14,7 @@ for y in range(H):
 Right = [[0] * W for _ in range(H)]
 for y in range(H):
     count = 0
-    for x in range(W-1, -1, -1):
+    for x in range(W - 1, -1, -1):
         if S[y][x] == '#':
             count = 0
         else:
@@ -34,7 +34,7 @@ for x in range(W):
 Down = [[0] * W for _ in range(H)]
 for x in range(W):
     count = 0
-    for y in range(H-1, -1, -1):
+    for y in range(H - 1, -1, -1):
         if S[y][x] == '#':
             count = 0
         else:

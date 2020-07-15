@@ -15,7 +15,7 @@ for i in range(2, l+1):
     dp[i] = min(dp[i-1]+t1, dp[i-2]+t1+t2)
     if i > 4:
         dp[i] = min(dp[i], dp[i-4]+t1+t2*3)
-    
+
     if h < len(x) and i == x[h]:
         dp[i] = dp[i] + t3
         h += 1

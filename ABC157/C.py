@@ -9,12 +9,12 @@ def main():
             print(-1)
             exit()
         t[s] = c
-        
+
     if N != 1:
         if t[0] == 0:
             print(-1)
             exit()
-        
+
         if t[0] == -1:
             t[0] = 1
 
@@ -24,8 +24,9 @@ def main():
     else:
         if t[0] == -1:
             t[0] = 0
-    
-    print(''.join(map(str,t)))
+
+    print(''.join(map(str, t)))
+
 
 if __name__ == '__main__':
     main()

@@ -31,7 +31,7 @@ class UnionFind:
         y = self.find(y)
         if x == y:
             return
-        
+
         if self.rank[x] < self.rank[y]:
             self.par[x] = y
             self.size[y] += self.size[x]

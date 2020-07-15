@@ -9,7 +9,7 @@ e = ['J', 'O', 'I']
 for i in range(M):
     for j in range(N):
         for k in range(3):
-            s[i+1][j+1][k] = s[i][j+1][k] +s[i+1][j][k] - s[i][j][k]
+            s[i+1][j+1][k] = s[i][j+1][k] + s[i+1][j][k] - s[i][j][k]
 
             if a[i][j] == e[k]:
                 s[i+1][j+1][k] += 1

@@ -16,7 +16,7 @@ class UnionFind:
         y = self.find(y)
         if x == y:
             return
-        
+
         if self.rank[x] < self.rank[y]:
             self.par[x] = y
             self.size[y] += self.size[x]
@@ -25,7 +25,7 @@ class UnionFind:
             self.size[x] += self.size[y]
             if self.rank[x] == self.rank[y]:
                 self.rank[x] += 1
-    
+
     def same(self, x, y):
         if self.find(x) == self.find(y):
             return True
@@ -44,6 +44,7 @@ if k == n:
     print(0)
     exit()
 
+
 def kruskal(n, edges):
     uf = UnionFind(n)
     trees = n
@@ -56,5 +57,6 @@ def kruskal(n, edges):
             if trees == k:
                 return res
     return res
+
 
 print(kruskal(n, edges))

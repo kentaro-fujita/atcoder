@@ -13,7 +13,8 @@ for y in range(H):
         for dx, dy in dxdy:
             nx = x + dx
             ny = y + dy
-            if nx >= W or ny >= H: continue
+            if nx >= W or ny >= H:
+                continue
             if s[ny][nx] == '#' and s[y][x] == '.':
                 dp[ny][nx] = min(dp[ny][nx], dp[y][x] + 1)
             else:

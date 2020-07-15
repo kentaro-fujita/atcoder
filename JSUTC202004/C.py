@@ -5,7 +5,7 @@ a = [a1, a2, a3]
 N = a1 + a2 + a3
 
 res = 0
-for p in permutations(range(1,N+1)):
+for p in permutations(range(1, N+1)):
     X = [p[:a1], p[a1:a1+a2], p[a1+a2:]]
     flag = True
     for i in range(3):

@@ -1,5 +1,6 @@
 n = int(input())
 
+
 def dfs(s, mx):
     if len(s) == n:
         print(s)
@@ -10,4 +11,6 @@ def dfs(s, mx):
                 dfs(s+c, mx+1)
             else:
                 dfs(s+c, mx)
+
+
 dfs('', 0)

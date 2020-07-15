@@ -7,7 +7,8 @@ k = 1
 for i in range(h):
     row = []
     for j in range(w):
-        if not a[k]: k += 1
+        if not a[k]:
+            k += 1
         row.append(k)
         a[k] -= 1
     if i % 2 == 1:

@@ -5,6 +5,7 @@ def check(string):
     else:
         return False
 
+
 def main():
     S = input()
     N = len(S)
@@ -17,14 +18,6 @@ def main():
     else:
         print('No')
 
+
 if __name__ == '__main__':
     main()
-
-"""
-import sys
-input = sys.stdin.readline
-
-A,B = map(int, input().split(' '))
-N = list(map(int, inputs().split(' ')))
-M = [int(input()), for _ in range(N)]
-"""

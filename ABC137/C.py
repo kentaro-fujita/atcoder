@@ -5,6 +5,6 @@ s = [''.join(sorted(input())) for _ in range(N)]
 
 ans = 0
 for i in Counter(s).values():
-    ans += i * (i-1) // 2
+    ans += i * (i - 1) // 2
 
 print(ans)

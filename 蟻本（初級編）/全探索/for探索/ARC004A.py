@@ -1,5 +1,6 @@
 import math
 
+
 def main():
     N = int(input())
     xy = [list(map(int, input().split())) for _ in range(N)]
@@ -15,6 +16,7 @@ def main():
                 max_distance = distance
 
     print(max_distance)
+
 
 if __name__ == '__main__':
     main()

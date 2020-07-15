@@ -16,7 +16,7 @@ class UnionFind:
         y = self.find(y)
         if x == y:
             return
-        
+
         if self.rank[x] < self.rank[y]:
             self.par[x] = y
             self.size[y] += self.size[x]
@@ -25,7 +25,7 @@ class UnionFind:
             self.size[x] += self.size[y]
             if self.rank[x] == self.rank[y]:
                 self.rank[x] += 1
-    
+
     def same(self, x, y):
         if self.find(x) == self.find(y):
             return True
@@ -43,9 +43,11 @@ def kruskal(n, edges):
             uf.unite(s, t)
     return res
 
+
 while True:
     n = int(input())
-    if n == 0: break
+    if n == 0:
+        break
 
     x = [0] * n
     y = [0] * n
@@ -53,12 +55,14 @@ while True:
     r = [0] * n
     for i in range(n):
         x[i], y[i], z[i], r[i] = map(float, input().split())
-    
+
     edges = []
     for i in range(n):
         for j in range(n):
-            if i == j: continue
-            c = max(((x[i]-x[j])**2 + (y[i]-y[j])**2 + (z[i]-z[j])**2)**(1/2) - (r[i]+r[j]), 0)
+            if i == j:
+                continue
+            c = max(((x[i]-x[j])**2 + (y[i]-y[j])**2 +
+                     (z[i]-z[j])**2)**(1/2) - (r[i]+r[j]), 0)
             edges.append((c, i, j))
-    
+
     print("{:.3f}".format(kruskal(n, edges)))

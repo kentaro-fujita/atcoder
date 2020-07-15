@@ -17,7 +17,8 @@ if d != 1:
     print(0)
     exit()
 
-dp = [[[[0] * (count5 + 1) for _ in range(count3 + 1)] for _ in range(count2 + 1)] for _ in range(n+1)]
+dp = [[[[0] * (count5 + 1) for _ in range(count3 + 1)]
+       for _ in range(count2 + 1)] for _ in range(n+1)]
 dp[0][0][0][0] = 1
 
 d2 = [0, 1, 0, 2, 0, 1]
@@ -31,7 +32,7 @@ for i in range(n):
                 for j in range(6):
                     nc2 = min(count2, c2 + d2[j])
                     nc3 = min(count3, c3 + d3[j])
-                    mc5 = min(count5, c5 + d5[j])
+                    nc5 = min(count5, c5 + d5[j])
                     dp[i + 1][nc2][nc3][nc5] += dp[i][c2][c3][c5] / 6
 
-print(sp[n][count2][count3][count5])
+print(dp[n][count2][count3][count5])

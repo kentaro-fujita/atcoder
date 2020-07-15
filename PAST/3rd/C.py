@@ -9,6 +9,7 @@ def power(a, n):
         a *= a
     return x
 
+
 a, r, n = map(int, input().split())
 
 ans = a * power(r, n-1)

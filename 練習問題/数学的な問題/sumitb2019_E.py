@@ -10,7 +10,7 @@ for i, a in enumerate(A):
         ans *= (3 - counter[a]) % mod
         counter[a] += 1
     else:
-        ans *= (counter[a-1] -counter[a]) % mod
+        ans *= (counter[a-1] - counter[a]) % mod
         counter[a] += 1
 
 print(ans % mod)

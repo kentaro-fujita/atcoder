@@ -2,10 +2,12 @@ def gcd(a, b):
     if b == 0:
         return a
     else:
-        return gcd(b, a%b)
+        return gcd(b, a % b)
+
 
 def lcm(a, b):
     return a // gcd(a, b) * b
+
 
 N, M = map(int, input().split())
 A = list(map(int, input().split()))

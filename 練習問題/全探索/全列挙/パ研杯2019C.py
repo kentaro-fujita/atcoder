@@ -8,7 +8,7 @@ for comb in combinations(range(M), 2):
     score = 0
     for i in range(N):
         score += max(A[i][comb[0]], A[i][comb[1]])
-    
+
     ans = max(ans, score)
 
 print(ans)
